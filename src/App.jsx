@@ -108,12 +108,12 @@ function App() {
       {showResults ? (
         /* 4. Final Results */
         <div className="final-results">
-          <Typography variant='h2' fontWeight="bold" my="2vh">Final Results</Typography>
-          <Typography variant='h3' my="5vh">
+          <Typography variant='h2' fontWeight="bold" my="2vh" color={"white"}>Final Results</Typography>
+          <Typography variant='h3' my="5vh" color={"white"}>
             {score} out of {questions.length} correct - (
             {(score / questions.length) * 100}%)
           </Typography>
-          <Button variant="contained" onClick={() => restartGame()}>Restart game</Button>
+          <Button variant="contained" onClick={() => restartGame()}>Restart quiz</Button>
         </div>
       ) : (
         /* 5. Question Card  */
@@ -122,7 +122,7 @@ function App() {
       animate={{opacity:1, transition: {duration: 1} }}
       exit={{opacity:0, transition: {duration: 1} }}>
           {/* Current Question  */}
-          <Typography variant='h5' >
+          <Typography variant='h5' color={"white"}>
             Question: {currentQuestion + 1} out of {questions.length}
           </Typography>
           <Typography variant='h4' fontWeight="bold" mt="5vh" color={"white"}>{questions[currentQuestion].text}</Typography>
